@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.gradient-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  width: 50%;
+  margin: 20px auto;
+}
+
+.current-gradient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  height: 200px;
+  width: 100%;
+  margin: 1rem 0;
+  color: #fff;
+  text-align: center;
+}
+.current-gradient.current-gradient p:last-child {
+  margin-top: 10px;
+  font-style: italic;
+  color: #000000;
+}
+
+.current-gradient h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.current-gradient p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.button-wrapper {
+  margin: 1rem 0;
+  width: 50%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #3ab0cd;
+  transition: all 0.4s;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2d2d2d;
+}
+
+.prev-gradients-list {
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.prev-gradient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 200px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.prev-gradient:hover {
+  scale: 1.05;
+}
+
+.prev-gradient p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .gradient-generator {
+    width: 90%;
+  }
+  .current-gradient {
+    height: 150px;
+  }
+  .current-gradient h2 {
+    font-size: 1.5rem;
+  }
+  .current-gradient p {
+    font-size: 1rem;
+  }
+  .button-wrapper {
+    width: 70%;
+  }
+  .prev-gradients-list {
+    overflow-x: scroll;
+  }
+  .prev-gradient {
+    width: 45%;
+    margin: 0.5rem 0.25rem;
+  }
+  .prev-gradient p {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1.2rem;
+  }
+}
